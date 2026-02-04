@@ -1,0 +1,111 @@
+.confirmation-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: var(--background);
+  margin-top: 85px;
+}
+
+.confirmation-container {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin: 0 auto;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.success-header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.success-header p {
+  color: var(--text-secondary);
+  font-size: 18px;
+}
+
+.confirmation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.ticket-section,
+.qr-section {
+  animation: slideIn 0.8s ease-out;
+}
+
+.qr-section h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+  color: var(--success-color);
+}
+
+.qr-section > p {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.qr-info {
+  background-color: #eff6ff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+}
+
+.qr-info p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .confirmation-content {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  .confirmation-actions {
+    display: none;
+  }
+}

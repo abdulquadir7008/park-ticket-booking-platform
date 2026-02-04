@@ -1,0 +1,79 @@
+.ticket-card {
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ticket-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.ticket-status {
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ticket-status.active {
+  background-color: var(--success-color);
+}
+
+.ticket-status.used {
+  background-color: var(--warning-color);
+}
+
+.ticket-status.expired {
+  background-color: var(--error-color);
+}
+
+.ticket-body {
+  padding: 24px;
+}
+
+.ticket-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ticket-info-row:last-child {
+  border-bottom: none;
+}
+
+.ticket-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.ticket-value {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.ticket-info-row.total {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px solid var(--border-color);
+  font-size: 18px;
+}
+
+.ticket-info-row.total .ticket-value {
+  color: var(--primary-color);
+}
